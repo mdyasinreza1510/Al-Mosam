@@ -1,8 +1,8 @@
-
+import "./Weather.css"
 function Weather(){
     return(
         <>
-        <div className="hero"></div>
+        <div className="hero"> hello</div>
         </>
     );
 }
