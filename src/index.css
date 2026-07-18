@@ -11,5 +11,13 @@ body{
     background-repeat:no-repeat ;
     background-position: center;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
+}
+.hero{
+    height: 90%;
+    width: 90%;
+    background-color: rgba(0, 0, 255, 0.268);
 }

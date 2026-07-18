@@ -2,7 +2,7 @@
 function Weather(){
     return(
         <>
-        <div>hi everyone</div>
+        <div className="hero"></div>
         </>
     );
 }
