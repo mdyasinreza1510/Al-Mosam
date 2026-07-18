@@ -2,7 +2,15 @@ import "./Weather.css"
 function Weather(){
     return(
         <>
-        <div className="hero"> hello</div>
+       <section className="hero">
+        <div className="main-content-box">
+            <div className="dash1">
+                dashboard
+            </div>
+
+            <div className="dash2"></div>
+        </div>
+       </section>
         </>
     );
 }
