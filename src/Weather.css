@@ -28,7 +28,6 @@ body,
 .main-content-box {
     height: 92%;
     width: 92%;
-    background-color: blue;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,11 +36,75 @@ body,
 .dash1 {
     height: 100%;
     width: 12%;
-    background-color: red;
+    background-color: none;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
 }
+
+.wtrlogo {
+    background-image: url("assets/Weather.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100%;
+    
+}
+
+.option-box {
+    position: relative;
+    margin-top: 20px;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+}
+
+.options {
+    height: 60px;
+    width: 100%;
+    color: white;
+    backdrop-filter: blur(90px);
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+    padding: 0px 0px 0px 8px;
+    transition: all 0.2s ease-in;
+
+}
+.options:hover{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.premium {
+    position: absolute;
+    height: 90px;
+    width: 90%;
+    background-color: red;
+    bottom: 2%;
+    border-radius: 20px;
+}
+
+
+
+
+
+
 
 .dash2 {
     height: 100%;
     width: 87%;
-    background-color: red;
+    background-color: none;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
 }
