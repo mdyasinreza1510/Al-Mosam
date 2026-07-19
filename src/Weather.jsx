@@ -6,11 +6,11 @@ function Weather() {
                 <div className="main-content-box">
 
                     <div className="cont1">
-                        <div className="logo"></div>
+                        <div className="logo">logo</div>
                         <div className="info1"></div>
                     </div>
 
-                    <div className="input-box"></div>
+                    <div className="input-box">input,search</div>
 
                     <div className="main-wtr-info"></div>
 
