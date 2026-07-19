@@ -30,10 +30,10 @@ body,
     width: 92%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    background-color: red;
 }
 
-.dash1 {
+/* .dash1 {
     height: 100%;
     width: 12%;
     background-color: none;
@@ -93,7 +93,7 @@ body,
     background-color: rgba(255, 255, 255, 0.1);
     bottom: 2%;
     border-radius: 20px;
-}
+} */
 
 
 

@@ -1,38 +1,24 @@
 import "./Weather.css"
-import { GoHomeFill } from "react-icons/go";
-import { FaMapMarkerAlt } from "react-icons/fa";
-import { MdOutlineDateRange } from "react-icons/md";
-import { FaRegHeart } from "react-icons/fa";
-import { IoSettingsSharp } from "react-icons/io5";
-function Weather(){
-    return(
+function Weather() {
+    return (
         <>
-       <section className="hero">
-        <div className="main-content-box">
+            <section className="hero">
+                <div className="main-content-box">
 
-            <div className="dash1">
+                    <div className="cont1">
+                        <div className="logo"></div>
+                        <div className="info1"></div>
+                    </div>
 
-                <div className="wtrlogo">weather logo</div>
+                    <div className="input-box"></div>
 
-                <div className="option-box">
-                    <div className="options"><GoHomeFill size={20}/>DASHBOARD</div>
+                    <div className="main-wtr-info"></div>
 
-                    <div className="options"><MdOutlineDateRange size={20}/>FORECAST</div>
+                    <div className="wtr-details"></div>
 
-                    <div className="options"><FaMapMarkerAlt size={20}/>MAP</div>
-
-                    <div className="options"><FaRegHeart size={18}/>FAVORITE</div>
-                    
-                    <div className="options"><IoSettingsSharp size={20}/>SETTING</div>
+                    <div className="last-cont"></div>
                 </div>
-
-                <div className="premium"></div>
-
-            </div>
-
-            <div className="dash2"></div>
-        </div>
-       </section>
+            </section>
         </>
     );
 }
