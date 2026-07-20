@@ -1,4 +1,5 @@
 import "./Weather.css"
+import { WiDayCloudy } from "react-icons/wi";
 function Weather() {
     return (
         <>
@@ -6,8 +7,11 @@ function Weather() {
                 <div className="main-content-box">
 
                     <div className="cont1">
-                        <div className="logo">logo</div>
-                        <div className="info1"></div>
+                        <div className="logo-box"><WiDayCloudy size={35} /> AL-MOSAM</div>
+                        <div className="info1">
+                            <button>current location</button>
+                            <div className="temp"><button>C</button><button>F</button></div>
+                        </div>
                     </div>
 
                     <div className="input-box">input,search</div>
