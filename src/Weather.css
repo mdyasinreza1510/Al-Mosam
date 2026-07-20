@@ -252,7 +252,7 @@ body,
 }
 
 .miniboxes {
-    /* background-color: red; */
+    
     height: 90px;
     width: 260px;
     color: white;
@@ -260,6 +260,17 @@ body,
     align-items: center;
     justify-content: center;
     
+    
+
+}
+.icons{
+    /* background-color: blue; */
+    height: 50px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 
 }
 

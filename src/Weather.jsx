@@ -7,7 +7,6 @@ import { TbTemperatureCelsius } from "react-icons/tb";
 import { TbTemperatureFahrenheit } from "react-icons/tb";
 import { WiDegrees } from "react-icons/wi";
 import { CiTempHigh } from "react-icons/ci";
-
 import { IoWaterOutline } from "react-icons/io5";
 import { FaWind } from "react-icons/fa";
 import { ImMeter } from "react-icons/im";
@@ -59,30 +58,30 @@ function Weather() {
                         </div>
 
                         <div className="divider"></div>
-                        
+
                         <div className="box2">
                             <div className="miniboxes">
-                                <div className="icon"><CiTempHigh size={45} /></div>
+                                <div className="icon"><CiTempHigh size={45} color="#FDB813" /></div>
                                 <div><p>Feels Like</p> <h4>30°</h4></div>
                             </div>
                             <div className="miniboxes">
-                                <div className="icon"><CiTempHigh size={45} /></div>
+                                <div className="icon"><IoWaterOutline size={35} color="#38BDF8" /></div>
                                 <div><p>Humidity</p> <h4>62%</h4></div>
                             </div>
                             <div className="miniboxes">
-                                <div className="icon"><CiTempHigh size={45} /></div>
+                                <div className="icon"><FaWind size={35} color="#60A5FA" /></div>
                                 <div><p>Wind Speed</p> <h4>14km/h</h4></div>
                             </div>
                             <div className="miniboxes">
-                                <div className="icon"><CiTempHigh size={45} /></div>
+                                <div className="icon"><ImMeter size={30} color="#8B5CF6" /></div>
                                 <div><p>Pressure</p> <h4>1008 hPa</h4></div>
                             </div>
                             <div className="miniboxes">
-                                <div className="icon"><CiTempHigh size={45} /></div>
+                                <div className="icon"><FiEye size={35} color="#A855F7"/></div>
                                 <div><p>Visibility</p> <h4>10km</h4></div>
                             </div>
                             <div className="miniboxes">
-                                <div className="icon"><CiTempHigh size={45} /></div>
+                                <div className="icon"><LuSun size={35} color="FBBF24" /></div>
                                 <div><p>UV INDEX</p> <h4>6 High</h4></div>
                             </div>
 
