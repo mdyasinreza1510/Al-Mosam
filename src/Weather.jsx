@@ -1,6 +1,12 @@
 import "./Weather.css"
+import React ,{ useState, useEffect, useRef } from 'react'
 import { WiDayCloudy } from "react-icons/wi";
+import { FaLocationDot } from "react-icons/fa6";
+import { TbTemperatureCelsius } from "react-icons/tb";
+import { TbTemperatureFahrenheit } from "react-icons/tb";
 function Weather() {
+    const [temp,settemp]=useState("c");
+    
     return (
         <>
             <section className="hero">
@@ -9,8 +15,10 @@ function Weather() {
                     <div className="cont1">
                         <div className="logo-box"><WiDayCloudy size={35} /> AL-MOSAM</div>
                         <div className="info1">
-                            <button>current location</button>
-                            <div className="temp"><button>C</button><button>F</button></div>
+                            <button className="cur-loc" > <FaLocationDot size={13}/> Current Location</button>
+                            <div className="temp">
+                                <button onClick={()=>settemp("c")} className={temp==="c"? "btnbg":"none"} ><TbTemperatureCelsius size={20}/></button>
+                                <button onClick={()=>settemp("f")} className={temp==="f"?"btnbg":"none"} ><TbTemperatureFahrenheit size={20}/></button></div>
                         </div>
                     </div>
 

@@ -26,17 +26,19 @@ body,
 }
 
 .main-content-box {
+    background-color: none;
+    backdrop-filter: blur(50px);
     height: 92%;
     width: 92%;
     display: flex;
     flex-direction: column;
-    background-color: red;
+    /* background-color: red; */
 }
 
 .cont1 {
     width: 100%;
     height: 60px;
-    background-color: blue;
+    /* background-color: blue; */
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -45,22 +47,74 @@ body,
 }
 
 .logo-box {
+    color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: start;
     height: 100%;
     width: 200px;
     gap: 4px;
-  
+
 }
 
 .info1 {
-   
     height: 100%;
-    width: 190px;
+    width: 300px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+}
+
+.cur-loc {
+    color: black;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    height: 60%;
+    width: 140px;
+    gap: 3px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 0px 0px 0px 5px;
+    flex-shrink: 0;
+    border: 1.6px solid #334155;
+    background: none;
+}
+
+.temp {
+    padding: 3px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 60%;
+    flex-shrink: 0;
+    border: 1.6px solid #334155;
+}
+
+.btnbg {
+    background-color: #3B82F6;
+    color: #FFFFFF;
+}
+
+.none {
+    background: none;
+    color: black;
+    
+}
+
+.temp button {
+    
+    height: 90%;
+    width: 50%;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
