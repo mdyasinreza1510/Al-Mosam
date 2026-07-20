@@ -19,6 +19,26 @@ import { LuSun } from "react-icons/lu";
 
 
 function Weather() {
+
+    const[city,setcity]=useState("");
+
+    const [citydata,setcitydata]=useState(null);
+
+    function handlecity(event){
+        setcity(event.target.value);
+    }
+
+    const API_KEY = "413bdd7371264a8b897195740262007";
+    const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`;
+    
+    
+    async function display() {
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log(data);
+        setcitydata(data);
+    }
+
     const [temp, settemp] = useState("c");
 
     return (
@@ -39,7 +59,7 @@ function Weather() {
 
                     <div className="input-box">
                         <div className="inp-search-box">
-                            <input type="text" placeholder="Search City..." /> <button>SEARCH</button>
+                            <input onChange={handlecity} type="text" placeholder="Search City..." value={city}/> <button onClick={display}>SEARCH</button>
                         </div>
                     </div>
 
@@ -49,11 +69,11 @@ function Weather() {
                                 <img src={cloud} alt="" srcset="" />
                             </div>
                             <div className="temp-info">
-                                <h1>28°</h1>
-                                <p>partly cloudy</p>
+                                <h1>{citydata?.current?.temp_c}°</h1>
+                                <p>{citydata?.current?.condition?.text}</p>
                                 <br />
-                                <p>new delhi, IN</p>
-                                <p>Friday 20 july | 10:30pm</p>
+                                <p>{citydata?.location?.name}, {citydata?.location?.country}</p>
+                                <p>{citydata?.location?.localtime}</p>
                             </div>
                         </div>
 
@@ -77,7 +97,7 @@ function Weather() {
                                 <div><p>Pressure</p> <h4>1008 hPa</h4></div>
                             </div>
                             <div className="miniboxes">
-                                <div className="icon"><FiEye className="ic" size={35} color="#A855F7"/></div>
+                                <div className="icon"><FiEye className="ic" size={35} color="#A855F7" /></div>
                                 <div><p>Visibility</p> <h4>10km</h4></div>
                             </div>
                             <div className="miniboxes">
