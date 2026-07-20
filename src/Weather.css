@@ -43,7 +43,7 @@ body,
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 15px 0px 10px;
     border-bottom: 1.6px solid #334155;
 }
 
@@ -74,7 +74,7 @@ body,
     align-items: center;
     height: 60%;
     width: 140px;
-    gap: 3px;
+    gap: 2px;
     border-radius: 10px;
     outline: none;
     border: none;
@@ -93,6 +93,7 @@ body,
     height: 60%;
     flex-shrink: 0;
     border: 1.6px solid #334155;
+
 }
 
 .btnbg {
@@ -157,10 +158,11 @@ body,
     border: none;
     background-color: #3B82F6;
     color: #FFFFFF;
-    transition: all ease 0.2s;
+    transition: all ease 0.1s;
 }
-.inp-search-box button:hover{
-    background-color: #2a6dff;
+
+.inp-search-box button:hover {
+    background-color: #0051ff;
 }
 
 
@@ -172,9 +174,64 @@ body,
 .main-wtr-info {
     width: 100%;
     height: 350px;
-    background-color: pink;
+    background-color: #131b355b;
     flex-shrink: 0;
 }
+
+.box1 {
+    height: 100%;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.cloud-status {
+
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cloud-status img {
+    height: 300px;
+
+
+}
+
+.temp-info {
+    color: white;
+    background-color: #0051ff;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.temp-info h1 {
+    color: #FFFFFF;
+
+    text-align: start;
+    font-size: 100px;
+    width: 100%;
+    line-height: 0.9;
+
+
+}
+
+
+
+
+
+
+
+
+
 
 
 .wtr-details {
