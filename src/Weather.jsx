@@ -22,7 +22,12 @@ function Weather() {
                         </div>
                     </div>
 
-                    <div className="input-box">input,search</div>
+
+                    <div className="input-box">
+                        <div className="inp-search-box">
+                            <input type="text" placeholder="Search City..." /> <button>SEARCH</button>
+                        </div>
+                    </div>
 
                     <div className="main-wtr-info"></div>
 
