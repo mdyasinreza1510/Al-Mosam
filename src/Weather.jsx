@@ -6,6 +6,19 @@ import { FaLocationDot } from "react-icons/fa6";
 import { TbTemperatureCelsius } from "react-icons/tb";
 import { TbTemperatureFahrenheit } from "react-icons/tb";
 import { WiDegrees } from "react-icons/wi";
+import { CiTempHigh } from "react-icons/ci";
+
+import { IoWaterOutline } from "react-icons/io5";
+import { FaWind } from "react-icons/fa";
+import { ImMeter } from "react-icons/im";
+import { FiEye } from "react-icons/fi";
+import { LuSun } from "react-icons/lu";
+
+
+
+
+
+
 function Weather() {
     const [temp, settemp] = useState("c");
 
@@ -45,18 +58,38 @@ function Weather() {
                             </div>
                         </div>
 
+                        <div className="divider"></div>
+                        
                         <div className="box2">
-                            <div className="miniboxes"></div>
-                            <div className="miniboxes"></div>
-                            <div className="miniboxes"></div>
-                            <br />
-                            <div className="miniboxes"></div>
-                            <div className="miniboxes"></div>
-                            <div className="miniboxes"></div>
+                            <div className="miniboxes">
+                                <div className="icon"><CiTempHigh size={45} /></div>
+                                <div><p>Feels Like</p> <h4>30°</h4></div>
+                            </div>
+                            <div className="miniboxes">
+                                <div className="icon"><CiTempHigh size={45} /></div>
+                                <div><p>Humidity</p> <h4>62%</h4></div>
+                            </div>
+                            <div className="miniboxes">
+                                <div className="icon"><CiTempHigh size={45} /></div>
+                                <div><p>Wind Speed</p> <h4>14km/h</h4></div>
+                            </div>
+                            <div className="miniboxes">
+                                <div className="icon"><CiTempHigh size={45} /></div>
+                                <div><p>Pressure</p> <h4>1008 hPa</h4></div>
+                            </div>
+                            <div className="miniboxes">
+                                <div className="icon"><CiTempHigh size={45} /></div>
+                                <div><p>Visibility</p> <h4>10km</h4></div>
+                            </div>
+                            <div className="miniboxes">
+                                <div className="icon"><CiTempHigh size={45} /></div>
+                                <div><p>UV INDEX</p> <h4>6 High</h4></div>
+                            </div>
+
                         </div>
 
                     </div>
-                    
+
 
                     <div className="wtr-details"></div>
 
