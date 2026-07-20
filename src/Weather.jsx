@@ -34,7 +34,7 @@ function Weather() {
                     <div className="main-wtr-info">
                         <div className="box1">
                             <div className="cloud-status">
-                               <img src={cloud} alt="" srcset="" />
+                                <img src={cloud} alt="" srcset="" />
                             </div>
                             <div className="temp-info">
                                 <h1>28°</h1>
@@ -44,9 +44,19 @@ function Weather() {
                                 <p>Friday 20 july | 10:30pm</p>
                             </div>
                         </div>
-                        
-                     </div>
-                        <div className="box2"></div>
+
+                        <div className="box2">
+                            <div className="miniboxes"></div>
+                            <div className="miniboxes"></div>
+                            <div className="miniboxes"></div>
+                            <br />
+                            <div className="miniboxes"></div>
+                            <div className="miniboxes"></div>
+                            <div className="miniboxes"></div>
+                        </div>
+
+                    </div>
+                    
 
                     <div className="wtr-details"></div>
 
