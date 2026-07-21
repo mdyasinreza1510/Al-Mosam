@@ -40,7 +40,7 @@ function Weather() {
 
     const [hourlyForecast, sethourlyForecast] = useState([]);
 
-    const[dc,setdc]=useState([]);
+    const [dc, setdc] = useState([]);
 
     const [fc, setfc] = useState([]);
 
@@ -229,13 +229,15 @@ function Weather() {
                         <div className="fc-box2">
                             {dc.map((frcst) => (
                                 <div className="fc">
-                                     <p></p>
-                                    <img  />
+                                    <p>{new Date(frcst.date).toLocaleDateString("en-US", {
+                                        weekday: "short",
+                                    })}</p>
+                                    <img />
                                     <h2>2&deg;</h2>
                                 </div>
                             ))}
 
-                            
+
 
 
 
