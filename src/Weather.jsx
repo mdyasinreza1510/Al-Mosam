@@ -20,7 +20,7 @@ import { LuSun } from "react-icons/lu";
 
 function Weather() {
 
-    const[city,setcity]=useState("");
+    const[city,setcity]=useState("asansol");
 
     const [citydata,setcitydata]=useState(null);
 
@@ -66,7 +66,7 @@ function Weather() {
                     <div className="main-wtr-info">
                         <div className="box1">
                             <div className="cloud-status">
-                                <img src={cloud} alt="" srcset="" />
+                                <img src={citydata?.current?.condition?.icon} alt="" />
                             </div>
                             <div className="temp-info">
                                 <h1>{citydata?.current?.temp_c}°</h1>
@@ -82,27 +82,27 @@ function Weather() {
                         <div className="box2">
                             <div className="miniboxes">
                                 <div className="icon"><CiTempHigh className="ic" size={45} color="#FDB813" /></div>
-                                <div><p>Feels Like</p> <h4>30°</h4></div>
+                                <div><p>Feels Like</p> <h4>{citydata?.current?.feelslike_c}°</h4></div>
                             </div>
                             <div className="miniboxes">
                                 <div className="icon"><IoWaterOutline className="ic" size={35} color="#38BDF8" /></div>
-                                <div><p>Humidity</p> <h4>62%</h4></div>
+                                <div><p>Humidity</p> <h4>{citydata?.current?.humidity}%</h4></div>
                             </div>
                             <div className="miniboxes">
                                 <div className="icon"><FaWind className="ic" size={35} color="#60A5FA" /></div>
-                                <div><p>Wind Speed</p> <h4>14km/h</h4></div>
+                                <div><p>Wind Speed</p> <h4>{citydata?.current?.wind_kph} km/h</h4></div>
                             </div>
                             <div className="miniboxes">
                                 <div className="icon"><ImMeter className="ic" size={30} color="#8B5CF6" /></div>
-                                <div><p>Pressure</p> <h4>1008 hPa</h4></div>
+                                <div><p>Pressure</p> <h4>{citydata?.current?.pressure_mb} hPa</h4></div>
                             </div>
                             <div className="miniboxes">
                                 <div className="icon"><FiEye className="ic" size={35} color="#A855F7" /></div>
-                                <div><p>Visibility</p> <h4>10km</h4></div>
+                                <div><p>Visibility</p> <h4>{citydata?.current?.vis_km} km</h4></div>
                             </div>
                             <div className="miniboxes">
                                 <div className="icon"><LuSun className="ic" size={35} color="FBBF24" /></div>
-                                <div><p>UV INDEX</p> <h4>6 High</h4></div>
+                                <div><p>UV INDEX</p> <h4>{citydata?.current?.uv}</h4></div>
                             </div>
 
                         </div>

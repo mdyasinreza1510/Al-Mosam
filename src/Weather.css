@@ -200,22 +200,23 @@ body,
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .cloud-status img {
-    height: 300px;
+    height: 210px;
 
 
 }
 
 .temp-info {
     color: white;
-    /* background-color: #0051ff; */
     height: 200px;
-    width: 200px;
+    width: 270px;
     display: flex;
     flex-direction: column;
     align-items: start;
+    flex-shrink: 0;
 }
 
 .temp-info h1 {
