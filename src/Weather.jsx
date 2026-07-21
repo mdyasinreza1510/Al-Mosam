@@ -31,8 +31,9 @@ import { FiSunset } from "react-icons/fi";
 function Weather() {
 
     const [city, setcity] = useState("asansol");
-
     const [citydata, setcitydata] = useState(null);
+
+    const [hourlyForecast,sethourlyForecast]=useState([]);
 
     const [fc, setfc] = useState([]);
 
@@ -47,12 +48,14 @@ function Weather() {
 
 
     async function display() {
+
         const response = await fetch(url);
         const response2 = await fetch(forcast);
         const data2 = await response2.json();
         const data = await response.json();
-        console.log(data2);
+
         setcitydata(data);
+        console.log(data2);
         setfc(data2);
 
     }
@@ -190,7 +193,17 @@ function Weather() {
 
                     </div>
 
-                    <div className="last-cont"></div>
+                    <div className="last-cont">
+
+                        <div className="fc-box1">
+                            <div className="fc"></div>
+                        </div>
+
+
+
+
+                        <div className="fc-box2"></div>
+                    </div>
                 </div>
             </section>
         </>
