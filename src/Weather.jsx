@@ -20,22 +20,26 @@ import { LuSun } from "react-icons/lu";
 
 function Weather() {
 
-    const[city,setcity]=useState("asansol");
+    const [city, setcity] = useState("asansol");
 
-    const [citydata,setcitydata]=useState(null);
+    const [citydata, setcitydata] = useState(null);
 
-    function handlecity(event){
+    function handlecity(event) {
         setcity(event.target.value);
     }
 
     const API_KEY = "413bdd7371264a8b897195740262007";
     const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`;
-    
-    
+
+    const forcast=`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=3`
+
+
     async function display() {
         const response = await fetch(url);
+        const response2= await fetch(forcast);
+        const data2= await response2.json();
         const data = await response.json();
-        console.log(data);
+        console.log(data2);
         setcitydata(data);
     }
 
@@ -59,7 +63,7 @@ function Weather() {
 
                     <div className="input-box">
                         <div className="inp-search-box">
-                            <input onChange={handlecity} type="text" placeholder="Search City..." value={city}/> <button onClick={display}>SEARCH</button>
+                            <input onChange={handlecity} type="text" placeholder="Search City..." value={city} /> <button onClick={display}>SEARCH</button>
                         </div>
                     </div>
 
