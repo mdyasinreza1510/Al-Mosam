@@ -244,7 +244,6 @@ body,
     width: 60%;
     margin-left: 2.5%;
     margin-right: 2.5%;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -279,7 +278,7 @@ body,
 
 .ic {
     filter:
-    drop-shadow(0 0 3px currentColor);
+        drop-shadow(0 0 3px currentColor);
 }
 
 
@@ -302,14 +301,14 @@ body,
     height: 120px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+justify-content: space-around;
     flex-shrink: 0;
-     padding: 0px 10px 0px 10px;
-     overflow: scroll;
-
+    padding: 0px 10px 0px 10px;
+    overflow: scroll;
+   
 }
-.detail-box{
-  
+
+.detail-box {
     height: 90px;
     width: 200px;
     color: white;
@@ -319,17 +318,9 @@ body,
     padding: 0px 0px 0px 10px;
     background: hsla(0, 0%, 100%, 0.1);
     border-radius: 10px;
-    flex-shrink: o;
+    flex-shrink: 0;
+    
 }
-
-
-
-
-
-
-
-
-
 
 
 .last-cont {
@@ -338,15 +329,3 @@ body,
     background-color: green;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-

@@ -17,6 +17,9 @@ import { BsCloudSnow } from "react-icons/bs";
 import { BsClouds } from "react-icons/bs";
 import { TbSunWind } from "react-icons/tb";
 import { FaRegSun } from "react-icons/fa6";
+import { FiSunrise } from "react-icons/fi";
+import { FiSunset } from "react-icons/fi";
+
 
 
 
@@ -30,6 +33,8 @@ function Weather() {
     const [city, setcity] = useState("asansol");
 
     const [citydata, setcitydata] = useState(null);
+
+    const [fc, setfc] = useState([]);
 
     function handlecity(event) {
         setcity(event.target.value);
@@ -48,6 +53,8 @@ function Weather() {
         const data = await response.json();
         console.log(data2);
         setcitydata(data);
+        setfc(data2);
+
     }
 
     const [temp, settemp] = useState("c");
@@ -111,10 +118,13 @@ function Weather() {
                                 <div className="icon"><FiEye className="ic" size={35} color="#A855F7" /></div>
                                 <div><p>Visibility</p> <h4>{citydata?.current?.vis_km} km</h4></div>
                             </div>
+
+
                             <div className="miniboxes">
                                 <div className="icon"><LuSun className="ic" size={35} color="FBBF24" /></div>
                                 <div><p>UV INDEX</p> <h4>{citydata?.current?.uv}</h4></div>
                             </div>
+
 
                         </div>
 
@@ -144,9 +154,9 @@ function Weather() {
 
 
                         <div className="detail-box">
-                            <div className="icon"><FaRegSun className="ic" size={35} color="FBBF24" /></div>
+                            <div className="icon"><FaRegSun className="ic" size={35} color="#fba524" /></div>
                             <div><p>Heat Index</p> <h4>{citydata?.current?.heatindex_c
-}°</h4>
+                            }°</h4>
                             </div>
 
 
@@ -154,24 +164,30 @@ function Weather() {
                         </div>
 
                         <div className="detail-box">
-                            <div className="icon"><BsClouds className="ic" size={35} color="FBBF24" /></div>
+                            <div className="icon"><BsClouds className="ic" size={35} color="#24e2fb" /></div>
                             <div><p>Clouds</p> <h4>{citydata?.current?.cloud}%</h4>
                             </div>
                         </div>
 
 
 
-
-
                         <div className="detail-box">
-                            <div className="icon"><FaWind className="ic" size={35} color="FBBF24" /></div>
-                            <div><p>Wind Temp.</p> <h4>{citydata?.current?.windchill_c}°</h4>
+                            <div className="icon"><FiSunrise className="ic" size={35} color="#f6df6d" /></div>
+                            <div><p>Sun Rise</p> <h4>{fc.forecast.forecastday[0].astro.sunrise}</h4>
                             </div>
                         </div>
 
-                        
 
-                        
+
+                        <div className="detail-box">
+                            <div className="icon"><FiSunset className="ic" size={35} color="#f8873d" /></div>
+                            <div><p>Sun Set</p> <h4>{fc.forecast.forecastday[0].astro.sunset}</h4>
+                            </div>
+                        </div>
+
+
+
+
                     </div>
 
                     <div className="last-cont"></div>
