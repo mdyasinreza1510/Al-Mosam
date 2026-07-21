@@ -30,12 +30,21 @@ import { FiSunset } from "react-icons/fi";
 
 function Weather() {
 
+
+
+
+
     const [city, setcity] = useState("asansol");
+
     const [citydata, setcitydata] = useState(null);
 
-    const [hourlyForecast,sethourlyForecast]=useState([]);
+    const [hourlyForecast, sethourlyForecast] = useState([]);
+
+    const[dc,setdc]=useState([]);
 
     const [fc, setfc] = useState([]);
+
+
 
     function handlecity(event) {
         setcity(event.target.value);
@@ -53,10 +62,11 @@ function Weather() {
         const response2 = await fetch(forcast);
         const data2 = await response2.json();
         const data = await response.json();
-
-        setcitydata(data);
         console.log(data2);
+        setcitydata(data);
         setfc(data2);
+        sethourlyForecast(data2.forecast.forecastday[0].hour);
+        setdc(data2.forecast.forecastday);
 
     }
 
@@ -176,7 +186,7 @@ function Weather() {
 
                         <div className="detail-box">
                             <div className="icon"><FiSunrise className="ic" size={35} color="#f6df6d" /></div>
-                            <div><p>Sun Rise</p> <h4>{fc.forecast.forecastday[0].astro.sunrise}</h4>
+                            <div><p>Sun Rise</p><h4>{fc?.forecast?.forecastday[0]?.astro?.sunrise}</h4>
                             </div>
                         </div>
 
@@ -184,7 +194,7 @@ function Weather() {
 
                         <div className="detail-box">
                             <div className="icon"><FiSunset className="ic" size={35} color="#f8873d" /></div>
-                            <div><p>Sun Set</p> <h4>{fc.forecast.forecastday[0].astro.sunset}</h4>
+                            <div><p>Sun Set</p><h4>{fc?.forecast?.forecastday[0]?.astro?.sunset}</h4>
                             </div>
                         </div>
 
@@ -195,14 +205,41 @@ function Weather() {
 
                     <div className="last-cont">
 
-                        <div className="fc-box1">
-                            <div className="fc"></div>
+                        <div className="fc-box1" >
+
+                            {hourlyForecast.map((hf) => (
+
+                                <div className="fc" key={hf.time_epoch}>
+                                    <p>{new Date(hf.time).toLocaleTimeString("en-US", {
+                                        hour: "numeric",
+                                        hour12: true,
+                                    })}</p>
+                                    <img src={hf.condition.icon} />
+
+                                    <h2>{hf.temp_c}&deg;</h2>
+                                </div>
+
+
+                            ))}
                         </div>
 
+                        <div className="divider2"></div>
+
+
+                        <div className="fc-box2">
+                            {dc.map((frcst) => (
+                                <div className="fc">
+                                     <p></p>
+                                    <img  />
+                                    <h2>2&deg;</h2>
+                                </div>
+                            ))}
+
+                            
 
 
 
-                        <div className="fc-box2"></div>
+                        </div>
                     </div>
                 </div>
             </section>

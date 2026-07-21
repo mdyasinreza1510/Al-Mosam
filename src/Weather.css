@@ -236,6 +236,7 @@ body,
     width: 1.5px;
     background-color: rgba(255, 255, 255, 0.2);
     transform: translateX(20px);
+    flex-shrink: 0;
 }
 
 .box2 {
@@ -326,21 +327,56 @@ body,
 .last-cont {
     width: 100%;
     height: 100%;
-    background-color: green;
-
-}
-.fc-box1{
-    height: 100%;
-    width: 60%;
-    background-color: red;
     display: flex;
     align-items: center;
-    padding: 0px 10px 0px 10px;
-    flex-shrink: 0;
+    background-color: #131b355b;
+
 }
-.fc{
-    background-color: blue;
+
+.fc-box1 {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    flex-shrink: 0;
+    overflow: scroll;
+    gap: 10px;
+}
+
+.fc {
+    background-color: hsla(226, 47%, 14%, 0.5);
+    color: #FFFFFF;
     height: 95%;
     width: 100px;
     border-radius: 20px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0px 5px 0px;
+
+}
+
+.fc img {
+    height: 40px;
+}
+
+.divider2 {
+    height: 60%;
+    width: 1.5px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.fc-box2 {
+    padding: 0px 10px 0px 10px;
+    background-color: red;
+    height: 100%;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    padding: 10px 10px 10px 10px;
+
 }
