@@ -228,12 +228,12 @@ function Weather() {
 
                         <div className="fc-box2">
                             {dc.map((frcst) => (
-                                <div className="fc">
+                                <div className="fc" key={frcst.date}>
                                     <p>{new Date(frcst.date).toLocaleDateString("en-US", {
                                         weekday: "short",
                                     })}</p>
-                                    <img />
-                                    <h2>2&deg;</h2>
+                                    <img src={frcst.day.condition.icon} />
+                                    <h2>{frcst.day.avgtemp_c}&deg;</h2>
                                 </div>
                             ))}
 
