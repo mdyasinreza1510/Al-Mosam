@@ -103,7 +103,7 @@ function Weather() {
             <section className="hero">
                {pop&& <div className="overlay">
                     <div className="err-box">
-                        <h2>{error}</h2>
+                        <h3>{error}</h3>
                         <button onClick={close}><h3>CLOSE</h3></button>
                     </div>
 

@@ -38,9 +38,11 @@ body,
     justify-content: center;
 }
 .err-box{
-    background-color: red;
+    background-color: #17430d;
+    color: white;
     height: 200px;
-    width: 500px;
+    width: 400px;
+    border-radius: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -50,7 +52,7 @@ body,
 }
 .err-box button{
     color: white;
-    background-color: blue;
+    background-color: #D90000;
     border: none;
     border-radius: 10px;
     width: 100px;
