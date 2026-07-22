@@ -34,7 +34,7 @@ function Weather() {
 
 
 
-    const [city, setcity] = useState("asansol");
+    const [city, setcity] = useState("");
 
     const [citydata, setcitydata] = useState(null);
 
@@ -46,6 +46,7 @@ function Weather() {
 
     const [error, seterror] = useState("");
     const [pop, setpop] = useState(false);
+    const [show, setshow] = useState(false);
 
 
 
@@ -54,6 +55,7 @@ function Weather() {
     }
     function close() {
         setpop(false);
+        setshow(false);
     }
     const API_KEY = "413bdd7371264a8b897195740262007";
     const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`;
@@ -93,6 +95,7 @@ function Weather() {
         setfc(data2);
         sethourlyForecast(data2.forecast.forecastday[0].hour);
         setdc(data2.forecast.forecastday);
+        setshow(true);
 
     }
 
@@ -101,18 +104,18 @@ function Weather() {
     return (
         <>
             <section className="hero">
-               {pop&& <div className="overlay">
+                {pop && <div className="overlay">
                     <div className="err-box">
                         <h3>{error}</h3>
                         <button onClick={close}><h3>CLOSE</h3></button>
                     </div>
 
-                </div>} 
+                </div>}
 
                 <div className="main-content-box">
 
                     <div className="cont1">
-                        <div className="logo-box"><WiDayCloudy size={35} /> AL-MOSAM</div>
+                        <div className="logo-box"><WiDayCloudy size={35} color="#38BDF8" /> AL-MOSAM</div>
                         <div className="info1">
                             <button className="cur-loc" > <FaLocationDot size={13} /> Current Location</button>
                             <div className="temp">
@@ -125,11 +128,25 @@ function Weather() {
                     <div className="input-box">
                         <div className="inp-search-box">
                             <input onChange={handlecity} type="text" placeholder="Search City..." value={city} /> <button onClick={display}>SEARCH</button>
-                           
+
                         </div>
                     </div>
 
-                    <div className="main-wtr-info">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    {show && <div className="main-wtr-info">
                         <div className="box1">
                             <div className="cloud-status">
                                 <img src={citydata?.current?.condition?.icon} alt="" />
@@ -176,11 +193,21 @@ function Weather() {
 
                         </div>
 
-                    </div>
+                    </div>}
 
 
 
-                    <div className="wtr-details">
+
+
+
+
+
+
+
+
+
+
+                    {show && <div className="wtr-details">
 
 
                         <div className="detail-box">
@@ -236,9 +263,9 @@ function Weather() {
 
 
 
-                    </div>
+                    </div>}
 
-                    <div className="last-cont">
+                    {show && <div className="last-cont">
 
                         <div className="fc-box1" >
 
@@ -277,7 +304,9 @@ function Weather() {
 
 
                         </div>
-                    </div>
+                    </div>}
+
+
                 </div>
             </section>
         </>
