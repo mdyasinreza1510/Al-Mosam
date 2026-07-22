@@ -45,13 +45,16 @@ function Weather() {
     const [fc, setfc] = useState([]);
 
     const [error, seterror] = useState("");
+    const [pop, setpop] = useState(false);
 
 
 
     function handlecity(event) {
         setcity(event.target.value);
     }
-
+    function close() {
+        setpop(false);
+    }
     const API_KEY = "413bdd7371264a8b897195740262007";
     const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`;
 
@@ -65,6 +68,7 @@ function Weather() {
             sethourlyForecast([]);
             setdc([]);
             setfc([]);
+            setpop(true);
             return;
 
         }
@@ -79,6 +83,7 @@ function Weather() {
             sethourlyForecast([]);
             setdc([]);
             setfc([]);
+            setpop(true);
             return;
         }
 
@@ -96,7 +101,13 @@ function Weather() {
     return (
         <>
             <section className="hero">
-<div className="overlay"></div>
+               {pop&& <div className="overlay">
+                    <div className="err-box">
+                        <h2>{error}</h2>
+                        <button onClick={close}><h3>CLOSE</h3></button>
+                    </div>
+
+                </div>} 
 
                 <div className="main-content-box">
 
@@ -114,7 +125,7 @@ function Weather() {
                     <div className="input-box">
                         <div className="inp-search-box">
                             <input onChange={handlecity} type="text" placeholder="Search City..." value={city} /> <button onClick={display}>SEARCH</button>
-                            <p>{error}</p>
+                           
                         </div>
                     </div>
 
