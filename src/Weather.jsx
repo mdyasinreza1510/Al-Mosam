@@ -44,6 +44,8 @@ function Weather() {
 
     const [fc, setfc] = useState([]);
 
+    const [error, seterror] = useState("");
+
 
 
     function handlecity(event) {
@@ -57,13 +59,32 @@ function Weather() {
 
 
     async function display() {
+        if (city === "") {
+            seterror("ENTER AN AREA!!");
+            setcitydata(null);
+            sethourlyForecast([]);
+            setdc([]);
+            setfc([]);
+            return;
 
-        const response = await fetch(url);
+        }
+
+
         const response2 = await fetch(forcast);
+
+
+        if (response2.status == 400) {
+            seterror("No matching location found.");
+            setcitydata(null);
+            sethourlyForecast([]);
+            setdc([]);
+            setfc([]);
+            return;
+        }
+
         const data2 = await response2.json();
-        const data = await response.json();
         console.log(data2);
-        setcitydata(data);
+        setcitydata(data2);
         setfc(data2);
         sethourlyForecast(data2.forecast.forecastday[0].hour);
         setdc(data2.forecast.forecastday);
@@ -75,6 +96,8 @@ function Weather() {
     return (
         <>
             <section className="hero">
+<div className="overlay"></div>
+
                 <div className="main-content-box">
 
                     <div className="cont1">
@@ -91,6 +114,7 @@ function Weather() {
                     <div className="input-box">
                         <div className="inp-search-box">
                             <input onChange={handlecity} type="text" placeholder="Search City..." value={city} /> <button onClick={display}>SEARCH</button>
+                            <p>{error}</p>
                         </div>
                     </div>
 
