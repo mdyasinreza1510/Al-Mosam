@@ -116,12 +116,12 @@ function Weather() {
 
                     <div className="cont1">
                         <div className="logo-box"><WiDayCloudy size={35} color="#38BDF8" /> AL-MOSAM</div>
-                        <div className="info1">
+                        {/* <div className="info1">
                             <button className="cur-loc" > <FaLocationDot size={13} /> Current Location</button>
                             <div className="temp">
                                 <button onClick={() => settemp("c")} className={temp === "c" ? "btnbg" : "none"} ><TbTemperatureCelsius size={20} /></button>
                                 <button onClick={() => settemp("f")} className={temp === "f" ? "btnbg" : "none"} ><TbTemperatureFahrenheit size={20} /></button></div>
-                        </div>
+                        </div> */}
                     </div>
 
 
