@@ -219,6 +219,7 @@ body,
     display: flex;
     align-items: center;
     overflow: scroll;
+    border-bottom: 1.6px solid #334155;
 }
 
 .box1 {
@@ -370,6 +371,7 @@ body,
     display: flex;
     align-items: center;
     background-color: #131b355b;
+    overflow: hidden;
 
 }
 
@@ -423,10 +425,16 @@ body,
 
 
 @media (min-width:390px) and (max-width: 440px) {
+    .hero {
+        height: 200%;
+        width: 100%;
+    }
 
     .cont1 {
 
+
         justify-content: center;
+
     }
 
     .logo-box {
@@ -455,20 +463,22 @@ body,
 
 
     .main-wtr-info {
-
+        padding: 0px;
         width: 100%;
-        height: 250px;
-        /* background-color: #131b355b; */
+        height: 450px;
         flex-shrink: 0;
         display: flex;
+        flex-direction: column;
         overflow: hidden;
         align-items: center;
+        justify-content: center;
+        border: none;
     }
 
     .box1 {
-        height: 100%;
-        width: 50%;
-        flex-direction: column;
+
+        height: 40%;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -478,8 +488,8 @@ body,
 
     .cloud-status {
 
-        height: 40px;
-        width: 100%;
+        height: 100%;
+        width: 30%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -487,83 +497,141 @@ body,
     }
 
     .cloud-status img {
-        height: 50px;
+        height: 110px;
 
 
     }
 
     .temp-info {
-
         color: white;
-        height: 200px;
-        width: 100%;
+        height: 100%;
+        width: 60%;
         display: flex;
         flex-direction: column;
-
         align-items: center;
+        justify-content: center;
         flex-shrink: 0;
     }
 
     .temp-info h1 {
-        color: #FFFFFF;
-        font-weight: 200;
         text-align: center;
         font-size: 70px;
         width: 100%;
-        line-height: 0.9;
-
-
     }
 
     .divider {
-        height: 60%;
-        width: 1.5px;
-        background-color: rgba(255, 255, 255, 0.2);
-        transform: translateX(20px);
-        flex-shrink: 0;
-        align-self: center;
-    }
+        height: 2px;
+        width: 70%;
+        transform: translate(0px);
 
+    }
     .box2 {
 
         height: 60%;
-        width: 60%;
-        margin-left: 2.5%;
-        margin-right: 2.5%;
+        width: 100%;
+        overflow: scroll;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         align-items: center;
-        justify-items: center;
-        row-gap: 1px;
-        column-gap: 10px
-    }
+        justify-items: start;
 
+
+    }
     .miniboxes {
-
         height: 90px;
-        width: 260px;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-
-
+        width: 110px;
     }
 
-    .icon {
-        /* background-color: blue; */
-        height: 50px;
-        width: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-
-    }
 
     .ic {
-        filter:
-            drop-shadow(0 0 3px currentColor);
+
+        height: 40px;
+        filter: drop-shadow(0 0 3px currentColor);
     }
+
+    .wtr-details {
+
+        width: 100%;
+        height: 450px;
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 0px 10px 0px 10px;
+
+
+
+    }
+
+    .detail-box {
+        height: 100px;
+        width: 95%;
+        background-color: #131b355b;
+
+
+    }
+    .last-cont {
+      
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* background-color: #131b355b; */
+        overflow: scroll;
+
+    }
+
+    .fc-box1 {
+
+        height: 70%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-content: center;
+        padding: 10px 10px 10px 10px;
+        flex-shrink: 0;
+        overflow: scroll;
+        gap: 10px;
+    }
+
+    .fc {
+       
+        height: 100%;
+        width: 100px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0px 5px 0px;
+
+    }
+
+    .fc img {
+        height: 40px;
+    }
+
+    .divider2 {
+        height: 1.5px;
+        width: 70%;
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateX(0px);
+        z-index: 2;
+    }
+
+    .fc-box2 {
+  
+        padding: 0px 10px 0px 10px;
+        height: 90%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px 10px 10px 10px;
+
+    }
+
 }
